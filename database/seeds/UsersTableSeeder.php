@@ -21,7 +21,7 @@ class UsersTableSeeder extends Seeder
         ];
 
         $user2 = [
-            'name' => 'Linden Bugress',
+            'name' => 'Linden Burgess',
             'email' => 'linden@burgess.com',
             'password' => Hash::make('password'),
             'admin' => false,
@@ -29,5 +29,7 @@ class UsersTableSeeder extends Seeder
 
         User::create($user1);
         User::create($user2);
+
+        factory(User::class, 23)->create();
     }
 }
