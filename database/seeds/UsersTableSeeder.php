@@ -18,6 +18,7 @@ class UsersTableSeeder extends Seeder
             'email' => 'spencer@wallace.com',
             'password' => Hash::make('password'),
             'role' => 'admin',
+            'profile' => 'https://picsum.photos/40?random',
         ];
 
         $user2 = [
@@ -25,6 +26,7 @@ class UsersTableSeeder extends Seeder
             'email' => 'linden@burgess.com',
             'password' => Hash::make('password'),
             'role' => 'user',
+            'profile' => 'https://picsum.photos/40/?random122',
         ];
 
         User::create($user1);
