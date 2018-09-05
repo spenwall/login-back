@@ -25,3 +25,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::middleware(['auth:api', 'admin'])->get('/users', function() {
     return UserResource::collection(User::paginate(5));
 });
+
+Route::middleware(['auth:api', 'admin'])->put('/user/{id}', 'UserController@update');
